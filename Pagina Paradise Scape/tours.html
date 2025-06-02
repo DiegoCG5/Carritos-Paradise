@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Nuestros Tours | Paradise Scape</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Arial', sans-serif;
+      background-color: #ffffff;
+    }
+
+    .header {
+      background-color: #ffea00;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+    }
+
+    .title {
+      color: #00227b;
+      font-weight: bold;
+      font-size: 24px;
+      text-align: center;
+      flex-grow: 1;
+    }
+
+    .logo {
+      height: 50px;
+    }
+
+    .menu {
+      position: relative;
+    }
+
+    .menu-btn {
+      font-size: 30px;
+      color: #00227b;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+    }
+
+    .menu-text {
+      font-weight: bold;
+      font-size: 18px;
+      margin-left: 8px;
+    }
+
+    .dropdown {
+      display: none;
+      position: absolute;
+      top: 50px;
+      left: 0;
+      background-color: white;
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+      z-index: 10;
+    }
+
+    .dropdown a {
+      display: block;
+      padding: 10px 20px;
+      color: #00227b;
+      text-decoration: none;
+    }
+
+    .dropdown a:hover {
+      background-color: #f0f0f0;
+    }
+
+    .content {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+      padding: 20px;
+    }
+
+    .card {
+      position: relative;
+      overflow: hidden;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+      cursor: pointer;
+    }
+
+    .card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .info {
+      position: absolute;
+      bottom: 0;
+      background: rgba(0, 34, 123, 0.9);
+      color: white;
+      width: 100%;
+      transform: translateY(100%);
+      transition: transform 0.3s ease-in-out;
+      padding: 15px;
+      text-align: center;
+    }
+
+    .card:hover {
+      transform: scale(1.02);
+    }
+
+    .card:hover .info {
+      transform: translateY(0);
+    }
+
+    @media (max-width: 600px) {
+      .content {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="menu">
+      <div class="menu-btn" onclick="toggleMenu()">
+        &#9776; <span class="menu-text">MENÚ</span>
+      </div>
+      <div class="dropdown" id="dropdownMenu">
+        <a href="tours.html">Nuestros Tours</a>
+        <a href="index.html">Reservar un carrito</a>
+      </div>
+    </div>
+    <div class="title">NUESTROS TOURS</div>
+    <img src="Recurso 1.png" alt="Logo Paradise Scape" class="logo">
+  </div>
+
+  <div class="content">
+    <a class="card" href="https://www.facebook.com/profile.php?id=61574621541638" target="_blank">
+      <img src="https://source.unsplash.com/featured/?chichen-itza" alt="Chichen Itzá">
+      <div class="info">
+        <h3>Chichen Itzá</h3>
+        <p>Tour completo con guía certificado, entrada, comida buffet y cenote.</p>
+      </div>
+    </a>
+    <a class="card" href="https://www.facebook.com/profile.php?id=61574621541638" target="_blank">
+      <img src="https://source.unsplash.com/featured/?boat" alt="Clear Boat">
+      <div class="info">
+        <h3>Clear Boat</h3>
+        <p>Paseo en barco transparente con vistas espectaculares del fondo marino.</p>
+      </div>
+    </a>
+    <a class="card" href="https://www.facebook.com/profile.php?id=61574621541638" target="_blank">
+      <img src="https://source.unsplash.com/featured/?waterpark" alt="Xel-Há">
+      <div class="info">
+        <h3>Xel-Há</h3>
+        <p>Parque acuático todo incluido para disfrutar con familia o amigos.</p>
+      </div>
+    </a>
+    <a class="card" href="https://www.facebook.com/profile.php?id=61574621541638" target="_blank">
+      <img src="https://source.unsplash.com/featured/?island" alt="Holbox">
+      <div class="info">
+        <h3>Holbox Económico</h3>
+        <p>Explora la isla Holbox con transportación, lancha y tiempo libre.</p>
+      </div>
+    </a>
+    <a class="card" href="https://www.facebook.com/profile.php?id=61574621541638" target="_blank">
+      <img src="https://source.unsplash.com/featured/?cenote" alt="Tulum 4x1">
+      <div class="info">
+        <h3>Tulum 4x1 Deluxe</h3>
+        <p>Visita Tulum, Cobá, cenote y Playa del Carmen en un solo tour.</p>
+      </div>
+    </a>
+    <a class="card" href="https://www.facebook.com/profile.php?id=61574621541638" target="_blank">
+      <img src="https://source.unsplash.com/featured/?lagoon" alt="Bacalar">
+      <div class="info">
+        <h3>Bacalar Rápidos</h3>
+        <p>Disfruta de la Laguna de los Siete Colores, los Rápidos y almuerzo local.</p>
+      </div>
+    </a>
+    <a class="card" href="https://www.facebook.com/profile.php?id=61574621541638" target="_blank">
+      <img src="https://source.unsplash.com/featured/?jungle" alt="Jungle Tour">
+      <div class="info">
+        <h3>Jungle Tour Adventure</h3>
+        <p>Conduce tu propia lancha y haz snorkel en los arrecifes de Cancún.</p>
+      </div>
+    </a>
+    <a class="card" href="https://www.facebook.com/profile.php?id=61574621541638" target="_blank">
+      <img src="https://source.unsplash.com/featured/?turtle" alt="Xenses">
+      <div class="info">
+        <h3>Xenses</h3>
+        <p>Un parque sensorial que pondrá a prueba tus sentidos con actividades únicas.</p>
+      </div>
+    </a>
+  </div>
+
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById("dropdownMenu");
+      menu.style.display = menu.style.display === "block" ? "none" : "block";
+    }
+
+    window.onclick = function(event) {
+      if (!event.target.closest('.menu')) {
+        document.getElementById("dropdownMenu").style.display = "none";
+      }
+    };
+  </script>
+</body>
+</html>
+
